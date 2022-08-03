@@ -1,0 +1,27 @@
+.pesq {
+  margin: 100px auto;
+}
+details {
+  background-color: blueviolet;
+  border-radius: 10px;
+  margin-left: 20px;
+  padding: 10px;
+  margin-top: 10px;
+}
+summary {
+  font-size: 25px;
+  color: #f0f0f0;
+  font-family: 'Lato', sans-serif;
+}
+p {
+  color: #f0f0f0;
+}
+
+.caixa {
+  display: inline-block;
+  color: #8b7587;
+  background: #f0f0f0;
+}
+.text {
+  color: #8b7587;
+}

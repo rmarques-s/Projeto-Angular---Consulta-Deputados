@@ -1,0 +1,75 @@
+<html>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+  <body>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+      <li><h2>CONSULTA DEPUTADOS </h2></li>
+    </ul>
+    <div class="pesq">
+      <details>
+        <summary>Deputados(as)</summary>
+        <div class="content">
+          <p>Nome:</p>
+          <input type="text" placeholder="ex: Natália Bonavides" #pp />
+          <input
+            type="button"
+            value="Pesquisar"
+            (click)="pesquisarDeputado(pp.value)"
+          />
+          <div>
+            <div class="caixa" *ngFor="let dep1 of deputados">
+              <img class="foto" [src]="dep1.urlFoto" />
+              <p class="text">Nome: {{ dep1.nome }}</p>
+              <p class="text">Partido: {{ dep1.siglaPartido }}</p>
+              <p class="text">Estado: {{ dep1.siglaUf }}</p>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>Partido</summary>
+        <div class="content">
+          <p>Pesquise pela sigla:</p>
+          <input type="text" placeholder="ex: PT" #sp />
+          <input
+            type="button"
+            value="Pesquisar"
+            (click)="pesquisaDeputadoPartido(sp.value)"
+          />
+          <div>
+            <div class="caixa" *ngFor="let dep2 of deputados1">
+              <img class="foto" [src]="dep2.urlFoto" width="150px" />
+              <p class="text">Nome: {{ dep2.nome }}</p>
+              <p class="text">Partido: {{ dep2.siglaPartido }}</p>
+              <p class="text">Estado: {{ dep2.siglaUf }}</p>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>Estado(UF)</summary>
+        <div class="content">
+          <p>Pesquise pelo estado(UF):</p>
+          <input type="text" placeholder="ex: RN" #se />
+          <input
+            type="button"
+            value="Pesquisar"
+            (click)="pesquisaDeputadoUF(se.value)"
+          />
+          <div>
+            <div class="caixa" *ngFor="let dep3 of deputados2">
+              <img class="foto" [src]="dep3.urlFoto" width="150px" />
+              <p class="text">Nome: {{ dep3.nome }}</p>
+              <p class="text">Partido: {{ dep3.siglaPartido }}</p>
+              <p class="text">Estado: {{ dep3.siglaUf }}</p>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </body>
+</html>
